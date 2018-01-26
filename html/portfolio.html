@@ -1,35 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>HTML wireframe</title>
+    <title>Christopher Jarvis</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/portfolio.css">
 </head>
 <body>
-    <nav role="navigation">Nav</nav>
+    <nav role="navigation" class="hidden">
+        <ul id="nav-links">
+            <li class="nav-link">About</li>
+            <li class="nav-link">Projects</li>
+            <li class="nav-link">Contact</li>
+        <ul>
+    </nav>
     <main role="main">
     	<div id="particles-js">
             <header>
-                <h1>Hi, I'm <span class="name">Christopher Jarvis</span>.<br> I'm a full-stack web developer.</h1>
-                <button id="view-projects-button">View my projects <i class="fa fa-arrow-right animation-rotate-90" aria-hidden="true"></i></button>
+                <h1 role="banner">Hi, I'm <span class="name">Christopher Jarvis</span>.<br> I'm a full-stack web developer.</h1>
+                <button id="view-projects-button">View my projects <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             </header>
         </div>
 
-        <section>
-            Section 1
+<section id="skills">
+        <header>
+            <h2>About</h2>
+        </header>
+    <div id="skills-container">
+        <div class="skillbar clearfix " data-percent="96%">
+            <div class="skillbar-title"><span>HTML5</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skill-bar-percent">96%</div>
+        </div> <!-- End Skill Bar --> 
+
+        <div class="skillbar clearfix " data-percent="98%">
+            <div class="skillbar-title"><span>CSS3</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skill-bar-percent">98%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="90%">
+            <div class="skillbar-title"><span>JavaScript</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skill-bar-percent">90%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="95%">
+            <div class="skillbar-title"><span>jQuery</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skill-bar-percent">95%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="90%">
+            <div class="skillbar-title"><span>React</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skill-bar-percent">90%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="97%">
+            <div class="skillbar-title"><span>Redux</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skill-bar-percent">100%</div>
+        </div> <!-- End Skill Bar -->
+
+        <div class="skillbar clearfix " data-percent="96%">
+            <div class="skillbar-title"><span>Node</span></div>
+            <div class="skillbar-bar"></div>
+            <div class="skill-bar-percent">76%</div>
+        </div> <!-- End Skill Bar -->
+    </div>
+</section>
+
+        <section id="projects">
+            Projects
         </section>
 
-        <section>
-            Section 2
-        </section>
-
-        <section>
-            Section 3
+        <section id="contact">
+            Contact
         </section>
     </main>
     <footer role="content-info">Footer</footer>
+    <script 
+    src="https://code.jquery.com/jquery-3.2.1.js" 
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" 
+    crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script type="text/javascript" src="../js/portfolio.js"></script>
     <script type="text/javascript" src="../js/particles-config.js"></script>

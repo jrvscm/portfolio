@@ -13,8 +13,7 @@ body {
 
 nav,
 footer {
-  padding: 1% 0;
-  background-color: #aaa;
+  background-color: #252934;
 }
 
 nav {
@@ -23,49 +22,13 @@ nav {
   left: 0;
   right: 0;
   z-index: 10;
-}
-
-
-
-header {
-  position: relative;
-  padding: 15% 0;
-  background-color: transparent;
+  text-align: right;
+  border-bottom: 3px solid #03CEA4;
   color: white;
-  z-index: 150;
-}
-
-span.name {
-  color: #03CEA4;
-}
-
-button#view-projects-button {
-  cursor: pointer;
-  color:white;
-  background-color: transparent;
-  padding: 15px;
-  border: 2px solid white;
-  transition: all .2s ease-in-out;
-}
-
-button#view-projects-button:hover {
-  background-color: white;
-  color: #252934;
-}
-
-.animation-rotate-right-90 {
-  -webkit-animation-name: rotate-90; 
-  -webkit-animation-duration: .2s; 
-  -webkit-animation-iteration-count: 1;
-  -webkit-transition-timing-function: linear;
-}
-
-@-webkit-keyframes rotate-90 {
-  100% {-webkit-transform: rotate(90deg); }
 }
 
 section {
-  min-height: 200px;
+  min-height: 400px;
   padding: 6% 0;
   background-color: #bbb;
 }
@@ -83,7 +46,130 @@ canvas {
   z-index: 1;
 } 
 
-/* ---- particles.js container ---- */ 
+header {
+  position: relative;
+  background-color: transparent;
+  color: white;
+  z-index: 150;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+ul#nav-links {
+  list-style-type: none;
+}
+
+li.nav-link {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+span.name {
+  color: #03CEA4;
+}
+
+button#view-projects-button {
+  cursor: pointer;
+  color:white;
+  background-color: transparent;
+  padding: 15px;
+  border: 2px solid white;
+  transition: all .2s ease-in-out;
+}
+
+button#view-projects-button:hover {
+  background-color: #03CEA4;
+  color: white;
+  border: 2px solid #03CEA4;
+}
+
+.hidden {
+  display:none;
+}
+
+/*skills*/
+section#skills header {
+  text-align: center;
+}
+
+div#skills-container{
+  width:500px;
+}
+
+.skillbar {
+  position:relative;
+  display:block;
+  margin-bottom:15px;
+  width:100%;
+  background:#eee;
+  height:35px;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  -webkit-transition:0.4s linear;
+  -moz-transition:0.4s linear;
+  -ms-transition:0.4s linear;
+  -o-transition:0.4s linear;
+  transition:0.4s linear;
+  -webkit-transition-property:width, background-color;
+  -moz-transition-property:width, background-color;
+  -ms-transition-property:width, background-color;
+  -o-transition-property:width, background-color;
+  transition-property:width, background-color;
+}
+
+.skillbar-title {
+  position:absolute;
+  top:0;
+  left:0;
+  width:110px;
+  font-weight:bold;
+  font-size:13px;
+  color:#ffffff;
+  background-color:#03CEA4;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:4px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+  display:block;
+  background:rgba(0, 0, 0, 0.1);
+  padding:0 20px;
+  height:35px;
+  line-height:35px;
+  -webkit-border-top-left-radius:3px;
+  -webkit-border-bottom-left-radius:3px;
+  -moz-border-radius-topleft:3px;
+  -moz-border-radius-bottomleft:3px;
+  border-top-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+  height:35px;
+  width:0px;
+  background:#028469;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+  position:absolute;
+  right:10px;
+  top:0;
+  font-size:11px;
+  height:35px;
+  line-height:35px;
+  color:#ffffff;
+  color:rgba(0, 0, 0, 0.4);
+}
+
 #particles-js { 
   height: 100vh;
   width: 100%; 
@@ -92,4 +178,31 @@ canvas {
   background-repeat: no-repeat;      
   background-size: cover; 
   background-position: 50% 50%; 
+  display:table;
 } 
+
+/* ---- Animations ---- */
+.animation-rotate-right-90 {
+  -webkit-animation-name: rotateRight; 
+  -webkit-animation-duration: .2s; 
+  -webkit-transition-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.animation-rotate-left-90 {
+  -webkit-animation-name: rotateLeft; 
+  -webkit-animation-duration: .2s; 
+  -webkit-transition-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotateRight {
+  from {-webkit-transform: rotate(0deg); }
+    to {-webkit-transform: rotate(90deg); }
+}
+
+@-webkit-keyframes rotateLeft {
+  from {-webkit-transform: rotate(90deg); }
+    to {-webkit-transform: rotate(0deg); }
+}
+
