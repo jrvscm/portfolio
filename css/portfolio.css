@@ -122,6 +122,27 @@ float: right;
 margin-top:5px;
 }
 
+form .error {
+  color: #ff0000;
+  border: 1px solid red;
+}
+
+label#firstname-error {
+  border:none;
+}
+
+label#lastname-error {
+  border:none;
+}
+
+label#email-error {
+  border:none;
+}
+
+label#message-error {
+  border:none;
+}
+
 fieldset {
   border:none;
   margin-bottom: 150px;
@@ -498,8 +519,8 @@ div.social {
   }
 
   div#bio-row p {
-  font-size: 16px;
-  text-align: left;
+    font-size: 16px;
+    text-align: left;
   }
 }
 

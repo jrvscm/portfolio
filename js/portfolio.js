@@ -71,15 +71,17 @@ function onScroll(event){
 function handleFormSubmit() {
   $('form').on('click', 'button', event => {
     event.preventDefault();
-
+    if($('#contact').isvalid()){
     let service_id = 'gmail';
     let template_id = 'portfolio';
     let template_params = {
        name: `${$('#firstname').val()} ${$('#lastname').val()}`,
+       email: `${$('#email').val()}`,
        message: `${$('#message').val()}`
     };
    emailjs.send(service_id, template_id, template_params);
    formSuccess();
+  }
   });
 
 
@@ -91,6 +93,7 @@ function formSuccess() {
 setTimeout(function() {
   $('#firstname').val('');
   $('#lastname').val('');
+  $('#email').val('');
   $('#message').val('');
 }, 200);
 
@@ -107,7 +110,30 @@ setTimeout(function() {
   }, 2200);
 }
 
+function watchFormSubmit() {
+  $("form[name='contact']").validate({
+    rules: {
+      firstname: "required",
+      lastname: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      message: "required"
+    },
+
+    messages: {
+      firstname: "Please enter your first name",
+      lastname: "Please enter your last name",
+      email: "Please enter a valid email",
+      message: "Please enter a message"
+    },
+  });
+}
+
+
 function onLoad() {
+  watchFormSubmit();
   handleFormSubmit();
   smoothScrollToLinks();
   rotateArrow();

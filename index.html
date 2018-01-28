@@ -208,19 +208,23 @@
                         <div class="success-message">
                             <h3 id='success-heading' class="hidden">Thank you for your message!</h3>
                         </div>
-                        <form action="#">
+                        <form action="#" name="contact" autocomplete="off" novalidate="novalidate">
                             <fieldset>
                                 <legend>Want to talk?</legend>
                                 <label for="firstname" aria-labelledby="first name">
-                                    <input id="firstname" type="text" name="firstname" placeholder="First">
+                                    <input id="firstname" type="text" name="firstname" placeholder="First" required>
                                 </label>
 
                                 <label for="lastname" aria-labelledby="last name">
-                                    <input id="lastname" type="text" name="lastname" placeholder="Last">
+                                    <input id="lastname" type="text" name="lastname" placeholder="Last" required>
+                                </label>
+
+                                <label for="email" aria-labelledby="email">
+                                    <input id="email" type="text" name="email" placeholder="Your email" required>
                                 </label>
 
                                 <label for="message" aria labelledby="message">
-                                    <textarea id="message" rows="6" placeholder="Your message"></textarea> 
+                                    <textarea id="message" rows="6" placeholder="Your message" required></textarea> 
                                 </label>
                                 <button type="submit">Submit</button>
                             </fieldset>
@@ -248,6 +252,7 @@
     src="https://code.jquery.com/jquery-3.2.1.js" 
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" 
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script type="text/javascript" src="./js/portfolio.js"></script>
     <script type="text/javascript" src="./js/particles-config.js"></script>
