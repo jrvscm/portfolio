@@ -25,6 +25,20 @@ nav {
   color: white;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+nav a.active {
+  color:#03CEA4;
+}
+
+nav a:hover {
+  color:#03CEA4;
+}
+
 footer {
   text-align: center;
   height: 40px;
@@ -121,9 +135,26 @@ input,textarea:focus {
 }
 
 div.social i {
-  margin-left: 20px;
-  margin-right: 20px;
   font-size:40px;
+}
+
+ul#social-links {
+  list-style-type: none; 
+  margin:0;
+  padding:0;
+  height: 40px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+li.social-link {
+  display: inline;
+  height: 40px;
+}
+
+li.social-link a:hover {
+  color:#03CEA4;
 }
 
 ul.technologies li {
@@ -386,32 +417,25 @@ div.projects-row:after{
 div#brewery-tour {
   display: inline-block;
   height:100%;
-  min-height: 400px;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1150197/Brewery-Tour-Route-Planner.png") no-repeat center center; 
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
+  width: 100%;
+}
+
+.portfolio-img {
+  height:auto;
+  width: 100%;
 }
 
 
 div#strength-tracker {
   display: inline-block;
-  height:100%;
-  min-height: 400px;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1150197/strength-tracker-create-workout.png") no-repeat center center; 
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
+  height:auto;
+  width: 100%;
 }
 
 div#habitualize {
   display: inline-block;
-  height:100%;
-  min-height: 400px;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1150197/habitualize-hero-area.png") no-repeat center center; 
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
+  height: auto;
+  width: 100%;
 }
 
 /* ---- Contact ---- */
@@ -419,7 +443,8 @@ section#contact {
   background-color: #252934;
   color:white;
   min-width:100%;
-  padding-bottom: 15px;
+  padding-top: 200px;
+  min-height: 100vh;
 }
 
 div.social {
@@ -450,5 +475,13 @@ div.social {
 @-webkit-keyframes rotateLeft {
   from {-webkit-transform: rotate(90deg); }
     to {-webkit-transform: rotate(0deg); }
+}
+
+/* ---- Media Queries ---- */
+@media only screen and (max-width: 500px) {
+  div#habitualize {
+    min-height: 0px;
+    height: 250px !important;
+  }
 }
 

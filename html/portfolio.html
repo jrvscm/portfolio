@@ -8,20 +8,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/flexboxgrid.min.css">
     <link rel="stylesheet" type="text/css" href="../css/portfolio.css">
-</head>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("user_GT2OKAvgxo6lGXxrtK6oJ");
+    })();
+    </script>
+    </head>
 <body>
     <nav role="navigation" class="hidden">
         <ul id="nav-links">
-            <li class="nav-link">About</li>
-            <li class="nav-link">Projects</li>
-            <li class="nav-link">Contact</li>
+            <li class="nav-link"><a href="#skills">About</a></li>
+            <li class="nav-link"><a href="#projects">Projects</a></li>
+            <li class="nav-link"><a href="#contact">Contact</a></li>
         <ul>
     </nav>
     <main role="main">
     	<div id="particles-js">
             <header>
                 <h1 role="banner">Hi, I'm <span class="name">Christopher Jarvis</span>.<br> I'm a full-stack web developer.</h1>
-                <button id="view-projects-button">View my projects <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="#skills"><button id="view-projects-button">View my projects <i class="fa fa-arrow-right" aria-hidden="true"></i></button></a>
             </header>
         </div>
 <section id="skills">
@@ -85,56 +92,47 @@
     </div>
     
     <div id="skills-container" class="col-xs-12 col-md-6">
-        <div class="skillbar clearfix " data-percent="84%">
+        <div class="skillbar clearfix " data-percent="98%">
             <div class="skillbar-title"><span>HTML5</span></div>
             <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">84%</div>
         </div> <!-- End Skill Bar --> 
 
-        <div class="skillbar clearfix " data-percent="83%">
+        <div class="skillbar clearfix " data-percent="96%">
             <div class="skillbar-title"><span>CSS3</span></div>
             <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">83%</div>
         </div> <!-- End Skill Bar -->
 
-        <div class="skillbar clearfix " data-percent="82%">
+        <div class="skillbar clearfix " data-percent="94%">
             <div class="skillbar-title"><span>JavaScript</span></div>
             <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">82%</div>
         </div> <!-- End Skill Bar -->
 
-        <div class="skillbar clearfix " data-percent="81%">
+        <div class="skillbar clearfix " data-percent="92%">
             <div class="skillbar-title"><span>jQuery</span></div>
             <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">81%</div>
         </div> <!-- End Skill Bar -->
 
         <div class="skillbar clearfix " data-percent="90%">
             <div class="skillbar-title"><span>React</span></div>
             <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">90%</div>
         </div> <!-- End Skill Bar -->
 
-        <div class="skillbar clearfix " data-percent="80%">
+        <div class="skillbar clearfix " data-percent="88%">
             <div class="skillbar-title"><span>Redux</span></div>
             <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">80%</div>
         </div> <!-- End Skill Bar -->
 
-        <div class="skillbar clearfix " data-percent="70%">
+        <div class="skillbar clearfix " data-percent="86%">
             <div class="skillbar-title"><span>Node</span></div>
             <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">70%</div>
         </div> <!-- End Skill Bar -->
-         <div class="skillbar clearfix " data-percent="60%">
+         <div class="skillbar clearfix " data-percent="75%">
             <div class="skillbar-title"><span>UI Design</span></div>
             <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">60%</div>
         </div> <!-- End Skill Bar -->
-         <div class="skillbar clearfix " data-percent="50%">
+         <div class="skillbar clearfix " data-percent="70%">
             <div class="skillbar-title"><span>Photoshop</span></div>
             <div class="skillbar-bar"></div>
-            <div class="skill-bar-percent">50%</div>
         </div> <!-- End Skill Bar -->
     </div>
 
@@ -154,6 +152,7 @@
                 <hr>
             </div>
             <div class="col-xs-12 col-md-8" id="habitualize">
+                <img class="portfolio-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1150197/habitualize-hero-area.png" alt="habitualize-landing-page">
             </div>
 
             <div class="col-xs-12 col-md-4">
@@ -163,12 +162,13 @@
                     <li><h4>Node.js, Express, MongoDB, Mocha, Chai</h4></li>
                  </ul>
                 <p>Habitualize is a full stack habit tracking application, built with React/Redux and Node.js. Habitualize provides users a way to create and track habits they find useful. Progress can be viewed through a current/best streak implementation and personalized charts and statistics.</p>
-                <button class="portfolio-button">Demo</button><button class="portfolio-button">Repo</button>          
+                <a href="https://habitualize.netlify.com" target="_blank"><button class="portfolio-button">Demo</button></a><a href="https://github.com/jrvscm/habitualize-client" target="_blank"><button class="portfolio-button">Repo</button></a>          
             </div>
         </div>
 
         <div class="row projects-row">
             <div class="col-xs-12 col-md-8" id="strength-tracker">
+                <img class="portfolio-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1150197/strength-tracker-create-workout.png" alt="strength-tracker-landing-page">
             </div>
 
             <div class="col-xs-12 col-md-4">
@@ -178,13 +178,14 @@
                     <li><h4>Node.js, Express, MongoDB, Mocha, Chai</h4></li>
                  </ul>
                 <p>Strength Tracker is a weight lifting tracker that allows users to track their lifts and view their progress in the gym. Users can create an account and track workouts, exercises, set weight, and reps through the user interface. Each exercise is viewable in a line-chart so users can see how they're progressing.</p>
-                <button class="portfolio-button">Demo</button><button class="portfolio-button">Repo</button>          
+                <a href="https://obscure-refuge-96931.herokuapp.com/" target="_blank"><button class="portfolio-button">Demo</button></a><a href="https://github.com/jrvscm/strength-tracker" target="_blank"><button class="portfolio-button">Repo</button></a>          
             </div>
         </div>
 
 
         <div class="row projects-row">
             <div class="col-xs-12 col-md-8" id="brewery-tour">
+                <img class="portfolio-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1150197/Brewery-Tour-Route-Planner.png" alt="brewery-tour-landing-page">
             </div>
             <div class="col-xs-12 col-md-4">
                 <h3>Brewery Tour</h3>
@@ -192,7 +193,7 @@
                     <li><h4>HTML5, CSS3, JavaScript, jQuery</h4></li>
                  </ul>
                 <p>Brewery tour connects craft beer enthusiasts with their favorite breweries. The app utilizes the BreweryDB API and the GoogleMaps API to create an exploratory, beer finding experience.</p>
-                <button class="portfolio-button">Demo</button><button class="portfolio-button">Repo</button>          
+                <a href="https://jrvscm.github.io/Brewery-Tour-App" target="_blank"><button class="portfolio-button">Demo</button></a><a href="https://github.com/jrvscm/Brewery-Tour-App" target="_blank"><button class="portfolio-button">Repo</button></a>          
             </div>
         </div>
         </section>
@@ -204,19 +205,22 @@
             </div>
             <div class="row center-xs">
                     <div class="col-md-4 col-xs-12">
-                        <form action="">
+                        <div class="success-message">
+                            <h3 id='success-heading' class="hidden">Thank you for your message!</h3>
+                        </div>
+                        <form action="#">
                             <fieldset>
                                 <legend>Want to talk?</legend>
                                 <label for="firstname" aria-labelledby="first name">
-                                    <input type="text" name="firstname" placeholder="First">
+                                    <input id="firstname" type="text" name="firstname" placeholder="First">
                                 </label>
 
                                 <label for="lastname" aria-labelledby="last name">
-                                    <input type="text" name="lastname" placeholder="Last">
+                                    <input id="lastname" type="text" name="lastname" placeholder="Last">
                                 </label>
 
                                 <label for="message" aria labelledby="message">
-                                    <textarea rows="6" placeholder="Your message"></textarea> 
+                                    <textarea id="message" rows="6" placeholder="Your message"></textarea> 
                                 </label>
                                 <button type="submit">Submit</button>
                             </fieldset>
@@ -229,10 +233,12 @@
     <footer role="content-info">            
         <div class="row center-xs">
             <div class="social col-md-4 col-xs-12">
-                <i class="fa fa-github" aria-hidden="true"></i>
-                <i class="fa fa-codepen" aria-hidden="true"></i>
-                <i class="fa fa-google-plus-official" aria-hidden="true"></i>
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <ul id="social-links">
+                <li class="social-link"><a href="https://github.com/jrvscm" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>
+                <li class="social-link"><a href="https://codepen.io/jrvscm/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i>
+                <li class="social-link"><a href="https://plus.google.com/u/0/105891232514569467325" target="_blank"><i class="fa fa-google-plus-official" aria-hidden="true"></i>
+                <li class="social-link"><a href="https://www.linkedin.com/in/chris-jarvis-8b974813b/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>
+            </ul>
             </div>
         </div>
     </footer>
