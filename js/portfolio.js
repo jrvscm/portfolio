@@ -71,7 +71,7 @@ function onScroll(event){
 function handleFormSubmit() {
   $('form').on('click', 'button', event => {
     event.preventDefault();
-    if($('#contact').isvalid()){
+    if($('form').valid()){
     let service_id = 'gmail';
     let template_id = 'portfolio';
     let template_params = {
