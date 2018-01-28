@@ -7,10 +7,6 @@ body,html {
   width: 100%;
 }
 
-div.row {
-  width: 100%;
-}
-
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -141,6 +137,13 @@ textarea {
 
 input,textarea:focus {
   outline:none;
+}
+
+
+div.row {
+  margin:0;
+  padding:0;
+  width: 100%;
 }
 
 div.social i {
@@ -492,6 +495,11 @@ div.social {
 @media only screen and (max-width: 500px) {
   header h1{
     font-size: 30px;
+  }
+
+  div#bio-row p {
+  font-size: 16px;
+  text-align: left;
   }
 }
 
