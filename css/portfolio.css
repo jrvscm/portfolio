@@ -136,6 +136,8 @@ input,textarea:focus {
 
 div.social i {
   font-size:40px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 ul#social-links {
