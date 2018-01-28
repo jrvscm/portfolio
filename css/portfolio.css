@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+body,html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -117,6 +122,27 @@ float: right;
 margin-top:5px;
 }
 
+form .error {
+  color: #ff0000;
+  border: 1px solid red;
+}
+
+label#firstname-error {
+  border:none;
+}
+
+label#lastname-error {
+  border:none;
+}
+
+label#email-error {
+  border:none;
+}
+
+label#message-error {
+  border:none;
+}
+
 fieldset {
   border:none;
   margin-bottom: 150px;
@@ -132,6 +158,13 @@ textarea {
 
 input,textarea:focus {
   outline:none;
+}
+
+
+div.row {
+  margin:0;
+  padding:0;
+  width: 100%;
 }
 
 div.social i {
@@ -481,9 +514,13 @@ div.social {
 
 /* ---- Media Queries ---- */
 @media only screen and (max-width: 500px) {
-  div#habitualize {
-    min-height: 0px;
-    height: 250px !important;
+  header h1{
+    font-size: 30px;
+  }
+
+  div#bio-row p {
+    font-size: 16px;
+    text-align: left;
   }
 }
 
