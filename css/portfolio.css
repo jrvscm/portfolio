@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+body,html {
+  height: 100%;
+  width: 100%;
+}
+
+div.row {
+  width: 100%;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
@@ -481,9 +490,8 @@ div.social {
 
 /* ---- Media Queries ---- */
 @media only screen and (max-width: 500px) {
-  div#habitualize {
-    min-height: 0px;
-    height: 250px !important;
+  header h1{
+    font-size: 30px;
   }
 }
 
