@@ -19,8 +19,8 @@ $(document).scroll(function() {
   } else {
     $('nav').slideUp('fast').addClass('hidden');
   }
-  skillBars();
-});
+    skillBars();
+  });
 }
 
 
@@ -47,25 +47,26 @@ function smoothScrollToLinks() {
       let $target = $(target);
 
       $('html, body').stop().animate({
-          'scrollTop': $target.offset().top + 10
+        'scrollTop': $target.offset().top + 10
       }, 900, 'swing');
-       $(document).on("scroll", onScroll);
+      
+      $(document).on("scroll", onScroll);
   });
 }
 
 function onScroll(event){
-    let scrollPos = $(document).scrollTop();
+  let scrollPos = $(document).scrollTop();
     $('#nav-links > .nav-link > a').each(function () {
-        let currLink = $(this);
-        let refElement = $(currLink.attr("href"));
+      let currLink = $(this);
+      let refElement = $(currLink.attr("href"));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#nav-links > .nav-link > a').removeClass("active");
-            currLink.addClass("active");
+          $('#nav-links > .nav-link > a').removeClass("active");
+          currLink.addClass("active");
         }
-        else{
-            currLink.removeClass("active");
+        else {
+          currLink.removeClass("active");
         }
-    });
+  });
 }
 
 function handleFormSubmit() {
@@ -75,16 +76,14 @@ function handleFormSubmit() {
     let service_id = 'gmail';
     let template_id = 'portfolio';
     let template_params = {
-       name: `${$('#firstname').val()} ${$('#lastname').val()}`,
-       email: `${$('#email').val()}`,
-       message: `${$('#message').val()}`
+      name: `${$('#firstname').val()} ${$('#lastname').val()}`,
+      email: `${$('#email').val()}`,
+      message: `${$('#message').val()}`
     };
-   emailjs.send(service_id, template_id, template_params);
-   formSuccess();
-  }
+    emailjs.send(service_id, template_id, template_params);
+    formSuccess();
+    }
   });
-
-
 }
 
 function formSuccess() {
@@ -130,6 +129,10 @@ function watchFormSubmit() {
     },
   });
 }
+
+function initializeEmailjs() {
+    emailjs.init("user_GT2OKAvgxo6lGXxrtK6oJ");
+  }
 
 
 function onLoad() {
