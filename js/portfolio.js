@@ -136,6 +136,7 @@ function initializeEmailjs() {
 
 
 function onLoad() {
+  initializeEmailjs();
   watchFormSubmit();
   handleFormSubmit();
   smoothScrollToLinks();
